@@ -2,7 +2,7 @@ import React from "react";
 
 const UserName = (props) => {
     return(
-        <div>{props.name}</div>
+        <div className="chats-header-name">{props.name}</div>
     )
 }
 

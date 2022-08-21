@@ -9,7 +9,8 @@ const ChatsList = (props) =>{
             id: chat.id,
             name: chat.name,
             lastMessage: message.text,
-            time: message.time
+            time: message.time,
+            avatar:chat.src
         }
     })
 

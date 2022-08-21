@@ -1,5 +1,6 @@
 import React from "react";
 import {useRef} from 'react';
+import sent from "../img/sent-button.png"
 
 const MessageTypeArea = (props) => {
     const ref = useRef(null);
@@ -9,9 +10,9 @@ const MessageTypeArea = (props) => {
         ref.current.value = '';
         };
     return (
-    <div>
-        <textarea ref={ref} rows="4" cols="50"></textarea>
-        <button onClick={sentMessage}>sent</button>
+    <div className="message-type-area">
+        <textarea className="textarea-style" ref={ref} placeholder="Type your message"></textarea>
+        <img className="sent-button" onClick={sentMessage} src={sent}/>
     </div>
 )}
 

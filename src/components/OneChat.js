@@ -1,5 +1,6 @@
 import React from "react";
 import Moment from "moment";
+import UserAvatar from "./UserAvatar";
 
 const OneChat = (props) => {
     // console.log(props.handleUserClick)
@@ -10,8 +11,17 @@ const OneChat = (props) => {
     const id = props.oneChatInfo.id
 
     return(
-        <div>
-            <div onClick={() => props.handleChatId(id)}>{name}<br/>{lastMessage}<br/>{lastMessageDate}</div><br/><br/>
+        <div className="one-chat" >
+            <div className="one-chat-style" onClick={() => props.handleChatId(id)}>
+            <UserAvatar avatar={props.oneChatInfo.avatar}/>
+            <div>
+                <div className="massage-name-style">{name}</div>
+                <div className="message-text-style">
+                   <p>{lastMessage}</p>
+                </div>
+            </div>
+                <div className="date">{lastMessageDate}</div>
+            </div>
         </div>
     )
 }

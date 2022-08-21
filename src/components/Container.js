@@ -3,7 +3,7 @@ import SidePanel from "./SidePanel";
 import MainPanel from "./MainPanel";
 import {v4} from 'uuid';
 import chatsInitData from "../init_data/chats";
-import "../style/global.css"
+import "../style/global.css";
 
 const Container = () => {
     const [needAnswer, setNeedAnswer] = useState(null)
@@ -75,12 +75,12 @@ const Container = () => {
             setNeedAnswer(chatId);
         }
     }
-    
+    const selectedUser = chats.find(chat => chat.id === chatId)
     return (
-    <div>
-        <SidePanel chats={chats} handleChatId={handleChatId} />  
-        {chatId  ? <MainPanel handleChats={handleChats} chatId={chatId} history={chats.find(chat => chat.id === chatId).messages} name={chats.find(chat => chat.id === chatId).name}/> : 'loading' }
-
+    <div className="container-style">
+        <SidePanel className="side-panel-container" chats={chats} handleChatId={handleChatId} />  
+        {chatId  ? <MainPanel handleChats={handleChats} chatId={chatId} history={selectedUser.messages} name={selectedUser.name} avatar={selectedUser.src}/> : 'loading' }
+        
     </div>
     )
 }

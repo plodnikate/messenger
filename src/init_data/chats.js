@@ -1,12 +1,16 @@
 import {v4} from 'uuid';
+import eric from "../img/avatars/erik.jpg";
+import alexander from "../img/avatars/alexander.jpg";
+import alice from "../img/avatars/alice.jpg";
+import michael from "../img/avatars/michael.jpg";
 
 const dateTime = 1332503892588;
 
 const chats = [
-    {id: v4(), name: "Alice Jo"},
-    {id: v4(), name: "Josefina"},
-    {id: v4(), name: "Valazquenz"},
-    {id: v4(), name: "Barrera"}
+    {id: v4(), name: "Alexander", src: alexander },
+    {id: v4(), name: "Alice", src: alice},
+    {id: v4(), name: "Erik", src: eric},
+    {id: v4(), name: "Michael", src: michael}
 ];
 
 const messages = [
