@@ -1,10 +1,9 @@
 import React from "react";
 
 const UserAvatar = (props) =>{
-    console.log(props.avatar)
     return(
         <div className="photo">
-            <img className="person-photo" src={props.avatar}/>
+            <img className="person-photo" src={props.avatar} alt='avatar'/>
         </div>
     )
 }

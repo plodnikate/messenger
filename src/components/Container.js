@@ -34,7 +34,6 @@ const Container = () => {
     };
 
     const handleChatId = (id) =>{
-        console.log(id)
         setChatId(id)
     }
 
@@ -43,15 +42,14 @@ const Container = () => {
             getAnswer(needAnswer);
             setNeedAnswer(null);
         }
+        // eslint-disable-next-line
     }, [needAnswer]);
 
     useEffect(() => {
         localStorage.setItem("chats", JSON.stringify(chats));
     }, [chats]);
 
-    const handleChats = (newMessageText, chatId, fromMe) => { 
-        console.log(newMessageText)
-        console.log(chatId)
+    const handleChats = (newMessageText, chatId, fromMe) => {
         const newMessage = {
             id: v4(),
             text: newMessageText,

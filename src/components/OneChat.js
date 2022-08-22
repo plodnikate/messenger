@@ -3,8 +3,6 @@ import Moment from "moment";
 import UserAvatar from "./UserAvatar";
 
 const OneChat = (props) => {
-    // console.log(props.handleUserClick)
-
     const name = props.oneChatInfo.name
     const lastMessage = props.oneChatInfo.lastMessage
     const lastMessageDate = Moment( props.oneChatInfo.time).format('MMM DD, yy')

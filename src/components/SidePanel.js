@@ -3,7 +3,6 @@ import UserArea from "./UserArea";
  import ChatsList from "./ChatsList";
 
 const SidePanel = (props) => {
-    console.log(props)
     const [searchValue, setSearchValue] = useState('')
 
     const handleInputChange = (event) =>{
