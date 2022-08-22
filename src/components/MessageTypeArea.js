@@ -6,8 +6,10 @@ const MessageTypeArea = (props) => {
     const ref = useRef(null);
     console.log(props)
     const sentMessage = () => {
-        props.handleChats(ref.current.value, props.chatId, true)
-        ref.current.value = '';
+        if (ref.current.value.trim()) {
+            props.handleChats(ref.current.value, props.chatId, true)
+            ref.current.value = '';
+        }
         };
     return (
     <div className="message-type-area">

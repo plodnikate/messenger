@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Arimo', sans-serif;
+    font-weight: lighter
 }
 .container-style{
     display: flex;
@@ -154,6 +157,7 @@ body{
     font-size: 16px;
     resize: none;
     color: #b0b0b0;
+    font-family: 'Arimo', sans-serif;
 }
 .sent-button{
     margin-left: -50px;
@@ -203,4 +207,15 @@ body{
     margin-top: 6px;
     font-size: 12px;
     color:#848484;
+}
+.init-main-panel-container{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #55aad7;
+}
+.chat-hisrory-wrapper{
+    padding-bottom: 0px;
 }

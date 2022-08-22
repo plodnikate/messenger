@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SidePanel from "./SidePanel";
 import MainPanel from "./MainPanel";
 import {v4} from 'uuid';
 import chatsInitData from "../init_data/chats";
 import "../style/global.css";
+import NotificationSound from "../notification-sound.mp3"
 
 const Container = () => {
     const [needAnswer, setNeedAnswer] = useState(null)
@@ -17,14 +18,18 @@ const Container = () => {
 
         return chatsInitData;
     }) 
-
+    const audioPlayer = useRef(null);
+      const playAudio = () =>{
+        audioPlayer.current.play();
+      }
     const getAnswer = (chatId) => {
         fetch("https://api.chucknorris.io/jokes/random")
             .then((res) => res.json())
             .then((res) => {
                 setTimeout(() => {
                     handleChats(res.value, chatId, false);
-                }, 2000);
+                    playAudio()
+                }, 13000);
             });
     };
 
@@ -69,7 +74,7 @@ const Container = () => {
             return updatedChat;
         });
 
-
+        
         setChats(updatedChats);
         if (fromMe) {
             setNeedAnswer(chatId);
@@ -79,8 +84,8 @@ const Container = () => {
     return (
     <div className="container-style">
         <SidePanel className="side-panel-container" chats={chats} handleChatId={handleChatId} />  
-        {chatId  ? <MainPanel handleChats={handleChats} chatId={chatId} history={selectedUser.messages} name={selectedUser.name} avatar={selectedUser.src}/> : 'loading' }
-        
+        {chatId  ? <MainPanel handleChats={handleChats} chatId={chatId} history={selectedUser.messages} name={selectedUser.name} avatar={selectedUser.src}/> : <div className="init-main-panel-container"><div> No select chat yet</div></div>  }
+        <audio ref={audioPlayer} src={NotificationSound} />
     </div>
     )
 }
