@@ -1,21 +1,16 @@
 {
   "files": {
-    "main.css": "/messenger/static/css/main.1f31d3d7.css",
-    "main.js": "/messenger/static/js/main.aa29ac03.js",
-    "static/media/erik.jpg": "/messenger/static/media/erik.80367f25c13d09877239.jpg",
-    "static/media/alexander.jpg": "/messenger/static/media/alexander.21beb1dda1b5ca293c3b.jpg",
-    "static/media/michael.jpg": "/messenger/static/media/michael.990bf8344d8845fea242.jpg",
-    "static/media/alice.jpg": "/messenger/static/media/alice.0b704560d5e9c1f519f3.jpg",
-    "static/media/me.png": "/messenger/static/media/me.0f78438d744716b937b6.png",
+    "main.css": "/messenger/static/css/main.80cb7486.css",
+    "main.js": "/messenger/static/js/main.764ea5f3.js",
     "static/media/notification-sound.mp3": "/messenger/static/media/notification-sound.00f0a2bdfcd321341b81.mp3",
     "static/media/search.png": "/messenger/static/media/search.37a9baaa5d1e1c4ca9de.png",
     "static/media/sent-button.png": "/messenger/static/media/sent-button.aacd272e93b8e15087bb.png",
     "index.html": "/messenger/index.html",
-    "main.1f31d3d7.css.map": "/messenger/static/css/main.1f31d3d7.css.map",
-    "main.aa29ac03.js.map": "/messenger/static/js/main.aa29ac03.js.map"
+    "main.80cb7486.css.map": "/messenger/static/css/main.80cb7486.css.map",
+    "main.764ea5f3.js.map": "/messenger/static/js/main.764ea5f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f31d3d7.css",
-    "static/js/main.aa29ac03.js"
+    "static/css/main.80cb7486.css",
+    "static/js/main.764ea5f3.js"
   ]
 }
